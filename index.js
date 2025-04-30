@@ -1,6 +1,4 @@
 import express from "express";
-import fs from "fs";
-import bodyParser from "body-parser";
 import jwt from 'jsonwebtoken'
 import cookieParser from 'cookie-parser';
 import { PORT, SECRET_JWT_KEY } from './config.js'
@@ -10,7 +8,6 @@ import reservesRoutes from "./routes/reserves.js"
 
 
 const app = express();
-
 app.use(cookieParser())
 app.use(express.json());
 
