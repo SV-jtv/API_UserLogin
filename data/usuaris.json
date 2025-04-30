@@ -1,0 +1,25 @@
+{
+    "usuaris": [
+        {
+            "id": 1,
+            "nom": "usuari",
+            "correu": "usuari@gmail.com",
+            "contrasenya": "1234",
+            "rol": "client"
+        },
+        {
+            "id": 2,
+            "nom": "usuari",
+            "correu": "usuari@gmail.com",
+            "contrasenya": "1234",
+            "rol": "admin"
+        },
+        {
+            "id": 3,
+            "nom": "cata",
+            "correu": "cata@gmail.com",
+            "contrasenya": "1234",
+            "rol": "client"
+        }
+    ]
+}

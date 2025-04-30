@@ -1,0 +1,25 @@
+{
+    "recursos": [
+        {
+            "id": 1,
+            "nom": "recurs",
+            "tipus": "sala",
+            "estat": "disponible",
+            "ubicacio": "C/ Aiguablava 4"
+        },
+        {
+            "id": 2,
+            "nom": "recurs",
+            "tipus": "vehicle",
+            "estat": "reservat",
+            "ubicacio": "C/ Aiguablava 4"
+        },
+        {
+            "id": 3,
+            "nom": "recurs",
+            "tipus": "equipament",
+            "estat": "fora de serve",
+            "ubicacio": "C/ Aiguablava 4"
+        }
+    ]
+}

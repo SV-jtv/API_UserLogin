@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Detall de Recursos</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Detall Recursos</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <strong>
+                        ID: <%= recurs.id %>
+                    </strong>
+                    <span>Nom: <%= recurs.nom %></span>
+                    <span>Tipus: <%= recurs.tipus %></span>
+                    <span>Estat: <%= recurs.estat %></span>
+                    <span>Ubicació: <%= recurs.ubicacio %></span>
+                </li>
+            </ul>
+            <div class="links-detalles"><a href="/recursos" class="btn-editar">Volver</a></div>
+        </section>
+    </main>
+</body>
+
+</html>

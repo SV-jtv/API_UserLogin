@@ -1,0 +1,25 @@
+{
+    "notificacions": [
+        {
+            "id": 1,
+            "tipus_accio": "",
+            "data-hora": "creació",
+            "detalls": "És una creació",
+            "idUsuari": 1
+        },
+        {
+            "id": 2,
+            "tipus_accio": "",
+            "data-hora": "modificació",
+            "detalls": "És una modificació",
+            "idUsuari": 2
+        },
+        {
+            "id": 3,
+            "tipus_accio": "",
+            "data-hora": "cancel·lació",
+            "detalls": "És una cancel·lació",
+            "idUsuari": 3
+        }
+    ]
+}

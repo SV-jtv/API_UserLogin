@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestió de Recursos</h1>
+        <nav>
+            <% if (user) { %>
+                <div class="user-info">
+                    <span>
+                        <%= user.username %>
+                    </span>
+                    <form action="/logout" method="POST">
+                        <button type="submit">Cerrar sesión</button>
+                    </form>
+                </div>
+                <% } %>
+                    <h2><a href="/home">Home</h2></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Llista de Recursos</h2>
+            <ul class="element-list">
+                <% data.recursos.forEach(recurs=> { %>
+                    <li class="element-item">
+                        <strong>ID: <%= recurs.id %></strong>
+                        <span>Estat: <%= recurs.estat %></span>
+                        <span><a href="<%=recurs.recursos_id%>"> Detall Recurs</a></span>
+                    </li>
+                    <% }) %>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

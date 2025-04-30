@@ -1,0 +1,28 @@
+{
+    "reserves": [
+        {
+            "id": 1,
+            "data_hora_inici": "",
+            "data_hora_fin": "",
+            "estat": "activa",
+            "idUsuari": 1,
+            "idRecurs": 1
+        },
+        {
+            "id": 2,
+            "data_hora_inici": "",
+            "data_hora_fin": "",
+            "estat": "cancel·lada",
+            "idUsuari": 2,
+            "idRecurs": 2
+        },
+        {
+            "id": 3,
+            "data_hora_inici": "",
+            "data_hora_fin": "",
+            "estat": "completada",
+            "idUsuari": 3,
+            "idRecurs": 3
+        }
+    ]
+}
