@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Gestió de Recursos</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
     <header>
         <h1>Gestió de Recursos</h1>
         <nav>
+            <h2><a href="/home">🏠 Home</a></h2>
             <% if (user) { %>
                 <div class="user-info">
-                    <span>
-                        <%= user.username %>
-                    </span>
+                    <span>👤 <%= user.username %></span>
                     <form action="/logout" method="POST">
-                        <button type="submit">Cerrar sesión</button>
+                        <button type="submit">Tancar sessió</button>
                     </form>
                 </div>
                 <% } %>
-                    <h2><a href="/home">Home</h2></a>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Llista de Recursos</h2>
-            <ul class="element-list">
-                <% data.recursos.forEach(recurs=> { %>
-                    <li class="element-item">
-                        <strong>ID: <%= recurs.id %></strong>
-                        <span>Estat: <%= recurs.estat %></span>
-                        <span><a href="<%=recurs.recursos_id%>"> Detall Recurs</a></span>
-                    </li>
-                    <% }) %>
-            </ul>
+            <% if (data.recursos.length> 0) { %>
+                <ul class="element-list">
+                    <% data.recursos.forEach(recurs=> { %>
+                        <li class="element-item">
+                            <strong>ID: <%= recurs.id %></strong>
+                            <span>Estat: <%= recurs.estat %></span>
+                            <span><a href="/recursos/<%= recurs.id %>" class="btn-home">🔍 Detall</a></span>
+                        </li>
+                        <% }) %>
+                </ul>
+                <% } else { %>
+                    <p>No hi ha recursos disponibles.</p>
+                    <% } %>
         </section>
     </main>
 </body>

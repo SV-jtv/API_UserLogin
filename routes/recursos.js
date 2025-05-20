@@ -31,7 +31,7 @@ router.use(requireAuth);
 
 
 //GET recursos
-router.get('/recursos', (req, res) => {
+router.get('/', (req, res) => {
     const { user } = req.session
     const data = readRecursos();
     res.render("recursos", { user, data})
@@ -39,7 +39,7 @@ router.get('/recursos', (req, res) => {
 });
 
 // Get recursos/:id
-router.get("/recursos/:id", (req, res) => {
+router.get("/:id", (req, res) => {
     const data = readRecursos();
     //Extraiem l'id de l'url recordem que req es un objecte tipus requets
     // que conté l'atribut params i el podem consultar
@@ -54,7 +54,7 @@ router.get("/recursos/:id", (req, res) => {
 });
 
 // Post recursos
-router.post("/recursos", (req, res) => {
+router.post("/", (req, res) => {
     const data = readRecursos();
     const body = req.body;
     //todo lo que viene en ...body se agrega al nuevo libro, 
@@ -69,7 +69,7 @@ router.post("/recursos", (req, res) => {
 });
 
 // Update recursos
-router.put("/recursos/:id", (req, res) => {
+router.put("/:id", (req, res) => {
     const data = readRecursos();
     const body = req.body;
     const id = parseInt(req.params.id);
@@ -88,7 +88,7 @@ router.put("/recursos/:id", (req, res) => {
 });
 
 // Delete recursos
-router.delete("/recursos/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
     const data = readRecursos();
     const id = parseInt(req.params.id);
     const index = data.recursos.findIndex(r => r.id === id);

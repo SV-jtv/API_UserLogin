@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-    <h1>Home</h1>
-    <h2>Hola <%= username %>!</h2>
-    <h2>Aquest contingut esta protegit</h2>
-    <ul>
-        <li><a href="/recursos">Llistat de Recursos</a></li>
-        <li><a href="/reserves">Llistat de Reserves</a></li>
-    </ul>
+    <header>
+        <h1>Home</h1>
+    </header>
+
+    <main class="home-container">
+        <section class="welcome-box">
+            <h2>Hola, <%= username %>!</h2>
+            <p>Aquest contingut està protegit. Accedeix a les seccions disponibles:</p>
+
+            <ul class="home-links">
+                <li><a href="/recursos" class="btn-home">📦 Llistat de Recursos</a></li>
+                <li><a href="/reserves" class="btn-home">📅 Llistat de Reserves</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>

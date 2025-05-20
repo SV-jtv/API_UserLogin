@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import DBLocal from 'db-local'
 import crypto from 'node:crypto'
 import { SALT_ROUNDS } from './config.js'

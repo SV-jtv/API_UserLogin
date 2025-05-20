@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserves</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
     <header>
         <h1>Gestió de Reserves</h1>
         <nav>
+            <h2><a href="/home">🏠 Home</a></h2>
             <% if (user) { %>
                 <div class="user-info">
-                    <span>
-                        <%= user.username %>
-                    </span>
+                    <span>👤 <%= user.username %></span>
                     <form action="/logout" method="POST">
-                        <button type="submit">Cerrar sesión</button>
+                        <button type="submit">Tancar sessió</button>
                     </form>
                 </div>
-                <% } %>
-                    <h2><a href="/home">Home</h2></a>
+            <% } %>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Llista de Reserves</h2>
-            <ul class="element-list">
-                <% data.reserves.forEach(reserva=> { %>
-                    <li class="element-item">
-                        <strong>ID: <%= reserva.id %></strong>
-                        <span>Estat: <%= reserva.estat %></span>
-                        <span><a href="<%=reserva.reserves_id%>"> Detall Reserva</a></span>
-                    </li>
+            <% if (data.reserves.length > 0) { %>
+                <ul class="element-list">
+                    <% data.reserves.forEach(reserva => { %>
+                        <li class="element-item">
+                            <strong>ID: <%= reserva.id %></strong>
+                            <span>Estat: <%= reserva.estat %></span>
+                            <span><a href="/reserves/<%= reserva.id %>" class="btn-home">🔍 Detall</a></span>
+                        </li>
                     <% }) %>
-            </ul>
+                </ul>
+            <% } else { %>
+                <p>No hi ha reserves disponibles.</p>
+            <% } %>
         </section>
     </main>
 </body>

@@ -2,30 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserves</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalles de Reserva</title>
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
     <header>
-        <h1>Detall de Reserves</h1>
+        <h1>Detalle de Reserva</h1>
     </header>
+
     <main>
-        <section>
-            <h2>Detall Reserva</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <span>Tipus: <%= reserva.tipus %></span>
-                    <span>Hora inici: <%= reserva.hora_inici %> </span>
-                    <span>Hora final: <%= reserva.hora_final %> </span>
-                    <span>Estat: <%= reserva.estat %> </span>
-                    <span>Id d'usuari: <%= reserva.idUsuari %></span>
-                    <span>Id del recurs: <%= reserva.idRecurs %></span>
-                </li>
+        <section class="detalle-reserva">
+            <h2>Información de la Reserva</h2>
+            <ul class="detalle-list">
+                <li><strong>ID:</strong> <%= reserva.id %></li>
+                <li><strong>Hora inicio:</strong> <%= reserva.data_hora_inici %></li>
+                <li><strong>Hora final:</strong> <%= reserva.data_hora_fin %></li>
+                <li><strong>Estado:</strong> <%= reserva.estat %></li>
+                <li><strong>ID Usuario:</strong> <%= reserva.idUsuari %></li>
+                <li><strong>ID Recurso:</strong> <%= reserva.idRecurs %></li>
             </ul>
-            <div class="links-detalles"><a href="/reserves" class="btn-editar">Volver</a></div>
+            <div class="links-detalles">
+                <a href="/reserves" class="btn-volver">Volver a Reservas</a>
+            </div>
         </section>
     </main>
 </body>

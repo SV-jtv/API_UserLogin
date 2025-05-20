@@ -31,7 +31,7 @@ router.use(requireAuth);
 
 
 //GET reserves
-router.get('/reserves', (req, res) => {
+router.get('/', (req, res) => {
     const { user } = req.session
     const data = readReserves();
     res.render("reserves", { user, data})
@@ -39,22 +39,22 @@ router.get('/reserves', (req, res) => {
 });
 
 // Get reserves/:id
-router.get("/reserves/:id", (req, res) => {
+router.get("/:id", (req, res) => {
     const data = readReserves();
     //Extraiem l'id de l'url recordem que req es un objecte tipus requets
     // que conté l'atribut params i el podem consultar
     const id = parseInt(req.params.id);
-    const recurs = data.reserves.find(r => r.id === id);
+    const reserva = data.reserves.find(r => r.id === id);
 
-    if (!recurs) {
+    if (!reserva) {
         return res.status(404).json({ message: "Recurso no encontrado" });
     }
 
-    res.render("detallesReserves", { recurs: recurs });
+    res.render("detallesReservas", { reserva: reserva });
 });
 
 // Post reserves
-router.post("/reserves", (req, res) => {
+router.post("/", (req, res) => {
     const data = readReserves();
     const body = req.body;
     //todo lo que viene en ...body se agrega al nuevo libro, 
@@ -69,7 +69,7 @@ router.post("/reserves", (req, res) => {
 });
 
 // Update reserves
-router.put("/reserves/:id", (req, res) => {
+router.put("/:id", (req, res) => {
     const data = readReserves();
     const body = req.body;
     const id = parseInt(req.params.id);
@@ -88,7 +88,7 @@ router.put("/reserves/:id", (req, res) => {
 });
 
 // Delete reserves
-router.delete("/reserves/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
     const data = readReserves();
     const id = parseInt(req.params.id);
     const index = data.reserves.findIndex(r => r.id === id);

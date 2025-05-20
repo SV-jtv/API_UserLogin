@@ -2,24 +2,24 @@
     "reserves": [
         {
             "id": 1,
-            "data_hora_inici": "",
-            "data_hora_fin": "",
+            "data_hora_inici": "4:30",
+            "data_hora_fin": "21:15",
             "estat": "activa",
             "idUsuari": 1,
             "idRecurs": 1
         },
         {
             "id": 2,
-            "data_hora_inici": "",
-            "data_hora_fin": "",
+            "data_hora_inici": "9.00",
+            "data_hora_fin": "1:43",
             "estat": "cancel·lada",
             "idUsuari": 2,
             "idRecurs": 2
         },
         {
             "id": 3,
-            "data_hora_inici": "",
-            "data_hora_fin": "",
+            "data_hora_inici": "18:09",
+            "data_hora_fin": "22:55",
             "estat": "completada",
             "idUsuari": 3,
             "idRecurs": 3

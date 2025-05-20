@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
@@ -13,22 +13,21 @@
         <h1>Detall de Recursos</h1>
     </header>
     <main>
-        <section>
-            <h2>Detall Recursos</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <strong>
-                        ID: <%= recurs.id %>
-                    </strong>
-                    <span>Nom: <%= recurs.nom %></span>
-                    <span>Tipus: <%= recurs.tipus %></span>
-                    <span>Estat: <%= recurs.estat %></span>
-                    <span>Ubicació: <%= recurs.ubicacio %></span>
-                </li>
-            </ul>
-            <div class="links-detalles"><a href="/recursos" class="btn-editar">Volver</a></div>
-        </section>
-    </main>
+    <section class="detalle-recurso">
+        <h2>Detall Recursos</h2>
+        <ul class="detalle-list">
+            <li><strong>ID:</strong> <span><%= recurs.id %></span></li>
+            <li><strong>Nom:</strong> <span><%= recurs.nom %></span></li>
+            <li><strong>Tipus:</strong> <span><%= recurs.tipus %></span></li>
+            <li><strong>Estat:</strong> <span><%= recurs.estat %></span></li>
+            <li><strong>Ubicació:</strong> <span><%= recurs.ubicacio %></span></li>
+        </ul>
+        <div class="links-detalles">
+            <a href="/recursos" class="btn-editar">Volver</a>
+        </div>
+    </section>
+</main>
+
 </body>
 
 </html>
