@@ -94,6 +94,7 @@ app.post('/logout', (req, res) => {
 });
 
 
+
 // Rutas protegidas
 app.use("/recursos", recursosRoutes);
 app.use("/reserves", reservesRoutes);
